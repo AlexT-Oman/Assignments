@@ -2,20 +2,40 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 50px 50px 0 50px;
   background-color: #faf9f6;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   min-height: 95vh;
 }
-.main {
+/* .main {
   flex: 1;
 }
 
 h1 {
   font-size: 5rem;
+  flex: 1;
 }
 
 footer {
   text-align: right;
   color: midnightblue;
+} */
+
+.main{
+  display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100px 100px 500px;
+      gap: 25px;
 }
 
+.logo, h1{
+  grid-column: span 2;
+}
+
+h1{
+  width: 20rem;
+}
+
+.card{
+  background-color: blue;
+  
+}
