@@ -1,0 +1,20 @@
+.main{
+    display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 100px 100px;
+        gap: 20px;
+}
+.one{
+    background-color: blue;
+    grid-column: span 2;
+}
+.two{
+    background-color: blue;
+    grid-column: span 2;
+}
+.three{
+    background-color: blue;
+}
+.four{
+    background-color: blue;
+}
