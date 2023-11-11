@@ -15,6 +15,8 @@
       display: flex;
       gap: 50px;
       justify-content: center;
+      align-items: center; /* Should have added these to center the boxes vertically*/
+      height: 100vh; /* This too*/
     }
 
     .pricing-plan{
@@ -22,10 +24,12 @@
       padding: 20px;
       text-align: center;
       flex-basis: 400px;
+      /* flex: 1;
+      max-width: 400px; Could have done this instead of flex-basis for smoother transition*/
     }
 
      .pricing-plan li{
-      list-style-type: none;
+      list-style-type: none;/* list-style would have been better probably*/
       padding-top: 10px;
       padding-right: 40px;
     }
@@ -52,12 +56,25 @@
     
     /* Hint: What can you do with a media query and flexbox? */
     @media (max-width: 1250px) {
+      /* .pricing-container {
+        flex-direction: column;
+        height: 100%;
+      } This is better for less code but reacted weirder with other code */
       .pricing-container{
       display: flex;
       gap: 50px;
       justify-content: center;
       flex-direction: column;
       }
+
+      .pricing-plan{
+      background-color: lightgrey;
+      padding: 20px;
+      text-align: center;
+      flex-basis: 100px;
+      width: 25rem;
+      align-self: center;
+    }
     }
   </style>
 </head>
