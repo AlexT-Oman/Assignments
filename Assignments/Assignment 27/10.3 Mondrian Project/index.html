@@ -19,11 +19,83 @@
     HINT: Remember you can't change the properties of grid lines.
     But grid lines are transparent!
     */
+    .flex-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Entered from the solution file (specifically from the body)*/
+      margin: 0; /* Entered from the solution file (specifically from the body)*/
+      padding: 0; /* Entered from the solution file (specifically from the body)*/
+    }
+    
+    .grid-container{
+      display: grid;
+      grid-template-columns: 320px 1fr 50px; /* Technically did it differently and a slightly differen't look*/
+      grid-template-rows: 414px 130px 155px 20px;
+      width: 748px;
+      height: 748px;
+    }
+    /* Used this to help visualize what I was working on with all the white
+    .grid-container > *{
+      border: 4.5px solid #000;
+    } Just about everything below is different */
+    .one{
+      background-color: #E72F24;
+    }
+    .one, .seven, .eight{
+    border-right: 9px solid black;
+    border-bottom: 9px solid black;
+    }
+    .two, .three{
+      border-bottom: 9px solid black;
+    }
+    .four, .five, .ten, .eleven{
+      border-right: 9px solid black;
+    }
+    .nine{
+      grid-row: span 2;
+    }
+
+    .six{
+      background-color: #004592;
+      border-bottom: 19px solid black;
+    }
+
+    .eleven{
+      background-color: #F9D01E;
+      border-right: 153px solid #232629;
+    }
   </style>
 </head>
 
 <body>
   <!-- Write your HTML here -->
+  <div class="flex-container">
+    <div class="grid-container">
+      <div class="one">
+      </div>
+      <div class="two">
+      </div>
+      <div class="three">
+      </div>
+      <div class="four">
+      </div>
+      <div class="five">
+      </div>
+      <div class="six">
+      </div>
+      <div class="seven">
+      </div>
+      <div class="eight">
+      </div>
+      <div class="nine">
+      </div>
+      <div class="ten">
+      </div>
+      <div class="eleven">
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
