@@ -1,15 +1,46 @@
-html, body{
+body {
     margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
 }
 
-.maingrid{
+.maingrid {
     display: grid;
-    grid-template-rows: 4rem 1fr 4rem;
-    margin: 5px;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
 }
 
-.navbargrid{
-    display: grid;
-    grid-template-columns: 1fr 10rem;
+.navbar {
+    background-color: #164863;
+    color: #DDF2FD;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: 300px;
+}
+
+nav a {
+    color: #DDF2FD;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: #427D9D;
+}
+
+.navbar div {
+    margin-right: 300px;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
 }
