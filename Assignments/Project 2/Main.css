@@ -1,3 +1,15 @@
-.hero{
-    margin-top: 20px;
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.maingrid{
+    display: grid;
+    grid-template-rows: 4rem 1fr 4rem;
+    margin: 5px;
+}
+
+.navbargrid{
+    display: grid;
+    grid-template-columns: 1fr 10rem;
 }
