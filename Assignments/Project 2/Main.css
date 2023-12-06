@@ -1,24 +1,29 @@
+/* Resetting default margin and using a common font family */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
 }
 
+/* Creating a grid layout for the main sections of the page */
 .maingrid {
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
 }
 
+/* Styling the navbar at the top of the page to ensure it sticks to the top */
 .navbar{
     position: sticky;
     top: 0;
 }
 
+/* Styling the footer at the bottom of the page to ensure it sticks to the bottom */
 footer{
     position: sticky;
     bottom: 0;
 }
 
+/* Styling common to both navbar and footer */
 .navbar, footer {
     background-color: #164863;
     color: #DDF2FD;
@@ -28,36 +33,64 @@ footer{
     align-items: center;
 }
 
+/* Styling for navigation links and logo inside the navbar */
 nav, footer {
     display: flex;
     align-items: center;
-    padding-left: 18rem;
+    padding-left: 18rem; /* Adjusted padding for desktop screens */
 }
 
+/* Styling for links inside the navbar */
 nav a {
     color: #DDF2FD;
     text-decoration: none;
     padding: 5px 10px;
 }
 
+/* Changing the color of links on hover in the navbar */
 nav a:hover {
     color: #427D9D;
 }
 
+/* Adding margin to the right of divs inside the navbar and footer */
 .navbar div, footer div {
     margin-right: 18rem;
 }
 
+/* Styling for images inside the footer */
 footer img{
     height: 25px;
     margin-left: 10px;
 }
 
+/* Styling for images inside the navbar */
 nav img{
     height: 30px;
 }
 
+/* Styling for the main content section, aligning it with the edges of the navbar and footer */
+main{
+    padding: 0 19rem;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Styling for the hero section with a grid layout */
+.herogrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20vh 1fr;
+}
+
+/* Styling for the intro section within the hero */
+.intro{
+    grid-row: span 2;
+}
+
+
 @media screen and (max-width: 600px) {
+    main {
+        padding: 0 1rem;
+    }
     nav {
         align-items: center;
         margin-left: 1rem;
