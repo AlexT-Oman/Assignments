@@ -9,7 +9,17 @@ body {
     height: 100vh;
 }
 
-.navbar {
+.navbar{
+    position: sticky;
+    top: 0;
+}
+
+footer{
+    position: sticky;
+    bottom: 0;
+}
+
+.navbar, footer {
     background-color: #164863;
     color: #DDF2FD;
     padding: 5px;
@@ -18,29 +28,41 @@ body {
     align-items: center;
 }
 
-nav {
+nav, footer {
     display: flex;
     align-items: center;
-    margin-left: 300px;
+    padding-left: 18rem;
 }
 
 nav a {
     color: #DDF2FD;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px 10px;
 }
 
 nav a:hover {
     color: #427D9D;
 }
 
-.navbar div {
-    margin-right: 300px;
+.navbar div, footer div {
+    margin-right: 18rem;
+}
+
+footer img{
+    height: 25px;
+    margin-left: 10px;
+}
+
+nav img{
+    height: 30px;
 }
 
 @media screen and (max-width: 600px) {
     nav {
-        flex-direction: column;
         align-items: center;
+        margin-left: 1rem;
+    }
+    .navbar div {
+        display: none;
     }
 }

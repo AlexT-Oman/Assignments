@@ -1,72 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Oman</title>
+  <style>
+    body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
 
-        .maingrid {
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-            height: 100vh;
-        }
+.maingrid {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
 
-        .navbar {
-            background-color: #164863;
-            color: #DDF2FD;
-            padding: 10px;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
+.navbar{
+    position: sticky;
+    top: 0;
+}
 
-        nav {
-            display: flex;
-            align-items: center;
-        }
+footer{
+    position: sticky;
+    bottom: 0;
+}
 
-        nav a {
-            color: #DDF2FD;
-            text-decoration: none;
-            padding: 10px;
-        }
+.navbar, footer {
+    background-color: #164863;
+    color: #DDF2FD;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        nav a:hover {
-            background-color: #427D9D;
-        }
+nav, footer {
+    display: flex;
+    align-items: center;
+    padding-left: 18rem;
+}
 
-        @media screen and (max-width: 600px) {
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+nav a {
+    color: #DDF2FD;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    color: #427D9D;
+}
+
+.navbar div {
+    margin-right: 18rem;
+}
+
+footer img{
+    height: 25px;
+    margin-left: 10px;
+}
+
+nav img{
+    height: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        align-items: center;
+        margin-left: 1rem;
+    }
+    .navbar div {
+        display: none;
+    }
+}
+  </style>
 </head>
+
 <body>
-    <div class="maingrid body">
-        <div class="navbargrid navbar">
-            <nav>
-                <a href="#"><img src="./Photos/arrow-up-circle.svg" alt=""></a>
-                <a href="#">Intro</a>
-                <a href="#">Resume</a>
-                <a href="#">Experience</a>
-                <a href="#">About me</a>
-            </nav>
-            <div>
-                <a href="tel:###-###-####">(###)###-####</a>
-            </div>
-        </div>
-        <main>
-
-        </main>
-        <footer>
-
-        </footer>
+  <div class="maingrid body">
+    <div class="navbar">
+      <nav>
+        <a href="#"><img src="./Photos/arrow-up-circle.svg" alt="Top of Page Arrow"></a>
+        <a href="#">Intro</a>
+        <a href="#">Resume</a>
+        <a href="#">Experience</a>
+        <a href="#">About me</a>
+      </nav>
+      <div>
+        <a href="tel:###-###-####">(###)###-####</a>
+      </div>
     </div>
+    <main>
+      
+    </main>
+    <footer>
+      <div>
+        <a href="#"><img src="./Photos/github.svg" alt="Github logo link"></a>
+        <a href="#"><img src="./Photos/linkedin.svg" alt="Linkedin logo link"></a>
+      </div>
+      <div>
+        <a href="mailto:blank@blank.com">Email Me</a>
+      </div>
+    </footer>
+  </div>
 </body>
+
 </html>
