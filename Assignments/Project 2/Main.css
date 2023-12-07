@@ -82,6 +82,7 @@ main {
 /* Adjusting styling for header */
 h1 {
     font-size: 5vmax;
+    margin-top: 10vh;
 }
 
 /* Styling for the hero section with a grid layout */
