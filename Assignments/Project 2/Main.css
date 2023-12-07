@@ -106,8 +106,7 @@ h1 {
     cursor: pointer;
     font-size: 18px;
     font-weight: 700;
-    margin: 0 20px;
-    margin-right: 40px;
+    margin-right: 80px;
     touch-action: manipulation;
     transition: all .2s cubic-bezier(.22, .61, .36, 1);
 }
@@ -133,10 +132,57 @@ h1 {
         min-width: 150px;
     }
 }
-
+/* Styling the introduction paragraph */
 .intro p{
     font-size: 2.5vh;
     margin: 6rem 0;
+}
+/* Creating Resume Grid */
+.resumegrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* Fitting timeline img */
+.resume img{
+    height: 75vh;
+    width: 40vh;
+    margin-top: 70px;
+}
+/* Fitting timeline img */
+.skills h2, .relinfo h2{
+    margin: 0;
+    font-size: 4vh;
+}
+/* changing the skills font size */
+.skills > ul > li{
+    font-size: 3.5vh;
+}
+/* formatting for a proper disclaimer on skills */
+.skills p{
+    font-style: italic;
+}
+/* making a grid that autofills when new divs are added */
+.expgrid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+}
+/* Styling for experience h2 */
+.exptitle{
+    text-align: center;
+    font-size: 5vh;
+}
+/* Styling for experience h2 */
+.placeholderbox{
+    width: 250px;
+    height: 250px;
+    background-color: grey;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
 @media screen and (max-width: 600px) {
