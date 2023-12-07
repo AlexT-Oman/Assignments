@@ -11,16 +11,16 @@ body {
     height: 100vh;
 }
 
-/* Styling the navbar at the top of the page to ensure it sticks to the top */
-.navbar {
-    position: sticky;
-    top: 0;
-}
-
 /* Styling the footer at the bottom of the page to ensure it sticks to the bottom */
 footer {
     position: sticky;
     bottom: 0;
+}
+
+/* Styling the navbar at the top of the page to ensure it sticks to the top */
+.navbar{
+    position: fixed;
+    width: 100%;
 }
 
 /* Styling common to both navbar and footer */
@@ -76,7 +76,7 @@ nav img {
 main {
     padding: 0 19rem;
     box-sizing: border-box;
-    /* Include padding in width calculation */
+    background-color: #DDF2FD;
 }
 
 /* Adjusting styling for header */
