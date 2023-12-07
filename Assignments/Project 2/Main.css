@@ -40,7 +40,6 @@ footer {
     display: flex;
     align-items: center;
     padding-left: 18rem;
-    /* Adjusted padding for desktop screens */
 }
 
 /* Styling for links inside the navbar */
@@ -214,17 +213,45 @@ span {
     font-weight: 700;
 }
 
-@media screen and (max-width: 600px) {
-    main {
-        padding: 0 1rem;
-    }
+/* @media (min-width:768px){
+.aboutmobile{
+    display: none;
+}
+} */
 
-    nav {
-        align-items: center;
-        margin-left: 1rem;
-    }
-
-    .navbar div {
+@media (max-width:600px){
+    .navbar{
         display: none;
     }
+
+    footer{
+        display: none;
+    }
+
+    main {
+        padding: 0;
+        box-sizing: initial;
+        background-color: #DDF2FD;
+        max-width: 360px
+    }
+    
+    .herogrid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resumegrid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .timeline, .skills, .relinfo{
+        margin-bottom: 40px;
+    }
+
+    /* .about{
+        display: none;
+    } */
+
+
 }

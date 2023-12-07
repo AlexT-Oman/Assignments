@@ -5,29 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex Oman</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <style>
-    body {
+    /* Resetting default margin and using a common font family */
+body {
     margin: 0;
     font-family: 'Arial', sans-serif;
 }
 
+/* Creating a grid layout for the main sections of the page */
 .maingrid {
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
 }
 
-.navbar{
-    position: sticky;
-    top: 0;
-}
-
-footer{
+/* Styling the footer at the bottom of the page to ensure it sticks to the bottom */
+footer {
     position: sticky;
     bottom: 0;
 }
 
-.navbar, footer {
+/* Styling the navbar at the top of the page to ensure it sticks to the top */
+.navbar{
+    position: fixed;
+    width: 100%;
+}
+
+/* Styling common to both navbar and footer */
+.navbar,
+footer {
     background-color: #164863;
     color: #DDF2FD;
     padding: 5px;
@@ -36,42 +44,190 @@ footer{
     align-items: center;
 }
 
-nav, footer {
+/* Styling for navigation links and logo inside the navbar */
+nav,
+footer {
     display: flex;
     align-items: center;
     padding-left: 18rem;
 }
 
+/* Styling for links inside the navbar */
 nav a {
     color: #DDF2FD;
     text-decoration: none;
     padding: 5px 10px;
 }
 
+/* Changing the color of links on hover in the navbar */
 nav a:hover {
     color: #427D9D;
 }
 
-.navbar div {
+/* Adding margin to the right of divs inside the navbar and footer */
+.navbar div,
+footer div {
     margin-right: 18rem;
 }
 
-footer img{
+/* Styling for images inside the footer */
+footer img {
     height: 25px;
     margin-left: 10px;
 }
 
-nav img{
+/* Styling for images inside the navbar */
+nav img {
     height: 30px;
 }
 
-@media screen and (max-width: 600px) {
-    nav {
-        align-items: center;
-        margin-left: 1rem;
+/* Styling for the main content section, aligning it with the edges of the navbar and footer */
+main {
+    padding: 0 19rem;
+    box-sizing: border-box;
+    background-color: #DDF2FD;
+}
+
+/* Adjusting styling for header */
+h1 {
+    font-size: 5vmax;
+    margin-top: 10vh;
+}
+
+/* Styling for the hero section with a grid layout */
+.herogrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60vh 1fr;
+}
+
+/* Styling for the intro section within the hero */
+.intro {
+    grid-row: span 2;
+}
+
+/* Button Styling */
+.githubbutton,
+.linkedinbutton {
+    background-color: #427D9D;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: rgba(1, 60, 136, .5) 0 -1px 3px 0 inset, rgba(0, 44, 97, .1) 0 3px 6px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 80px;
+    touch-action: manipulation;
+    transition: all .2s cubic-bezier(.22, .61, .36, 1);
+}
+
+/* Making the linkedin button stand out more */
+.linkedinbutton {
+    background-color: #9BBEC8;
+    box-shadow: rgba(22, 72, 99, .5) 0 -1px 3px 0 inset, rgba(22, 72, 99, .1) 0 3px 6px 0;
+    ;
+}
+
+.githubbutton:hover {
+    background-color: #164863;
+    transform: translateY(-2px);
+}
+
+/* having the hover color be different */
+.linkedinbutton:hover {
+    background-color: #427D9D;
+    transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+
+    .githubbutton,
+    .linkedinbutton {
+        padding: 16px 44px;
+        min-width: 150px;
     }
-    .navbar div {
-        display: none;
+}
+
+/* Styling the introduction paragraph */
+.intro p {
+    font-size: 2.5vh;
+    margin: 6rem 0;
+}
+
+/* Creating Resume Grid */
+.resumegrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Fitting timeline img */
+.resume img {
+    height: 75vh;
+    width: 40vh;
+    margin-top: 70px;
+}
+
+/* Fitting timeline img */
+.skills h2,
+.relinfo h2 {
+    margin: 0;
+    font-size: 4vh;
+}
+
+/* changing the skills font size */
+.skills>ul>li {
+    font-size: 3.5vh;
+}
+
+/* formatting for a proper disclaimer on skills */
+.skills p {
+    font-style: italic;
+}
+
+/* making a grid that autofills when new divs are added */
+.expgrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+}
+
+/* Styling for experience h2 */
+.exptitle {
+    text-align: center;
+    font-size: 5vh;
+}
+
+/* Styling for experience h2 */
+.placeholderbox {
+    width: 250px;
+    height: 250px;
+    background-color: grey;
+}
+
+/* Centering the title of project and its preview box */
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/* Moving the p element in the bootstrap code up on the page */
+.move-up {
+    margin-top: 16vh;
+}
+
+/* Making the question bold */
+span {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 600px) {
+    
+    .body{
+        display: flex;
+        flex-direction: column;
     }
 }
   </style>
@@ -92,12 +248,163 @@ nav img{
       </div>
     </div>
     <main>
-      
+      <section class="hero">
+        <div class="herogrid">
+          <div class="titlename">
+            <h1>Let me Introduce Myself</h1>
+          </div>
+          <div class="intro">
+            <p>Hello, my name is Alex I am a current Computer Science Major in his second year. I am also taking an
+              online Udemey course to help me learn and fine tune my web development skills. Throughout this web page
+              you will be able to see and read my achievements in both front end development and backend development.
+              My goal is to work on this site quite often so there should be relatively regular updates to this site in
+              terms of adding new completed projects and the occasional redesign/new features. As you continue through
+              this page please keep in mind my focus is not on web design (although I do try to learn what I can) so
+              this site will likely not follow conventional design practices,
+              rather I ask you to look into the code of this site when judging my skills. I do aim to have as much of
+              the code needed for this site to be up on my github so please make sure to take a look at that. Along with
+              that I also have a link to my LinkedIn profile if you would like to see my more traditional Resume or
+              contact me via that way.
+              I should add If you wish to contact me, the best option is to give me a call using the phone number at the
+              top of the screen. That is my mobile phone so I can receive text or calls any time of day. Thank you!</p>
+          </div>
+          <div class="linkbutton">
+            <a href="https://github.com/AlexT-Oman"><button class="githubbutton">Github</button></a>
+            <a href="https://www.linkedin.com/in/alex-oman-00a386299?trk=people-guest_people_search-card"><button class="linkedinbutton">LinkedIn</button></a>
+          </div>
+
+        </div>
+      </section>
+      <section class="resume">
+        <div class="resumegrid">
+          <div class="timeline">
+            <img src="./Photos/WorkEduHistoryTimeLine.jpg" alt="">
+          </div>
+          <div class="skills">
+            <h2>My Skills</h2>
+            <ul>
+              <li>Sales Skills</li>
+              <li>Verbal Communication</li>
+              <li>Spreadsheets With MS Excel</li>
+              <li>Technical Support</li>
+              <li>Basic Maintenance and Repair</li>
+              <li>Customer Service</li>
+              <li>Attention to Detail</li>
+              <li>Work Style: Reliability</li>
+              <li>Customer Focused & Orientation</li>
+              <li>Mechanical Knowledge</li>
+              <li>Technical Support: Customer Situations</li>
+              <li>Administrative Assistant/Receptionist</li>
+            </ul>
+            <p>*All skills were determined by indeed quizes and scored proficient or better</p>
+          </div>
+          <div class="relinfo">
+            <h2>Relevant info</h2>
+            <p>This site will contain more work history than what will likely be relevant. To only see the relevant work
+              history please refer back to
+              my paper/pdf copy of my Resume. That will have everything I find relevant to the job I am applying for
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="exp">
+        <div class="exptitle">
+          <h2>My Work</h2>
+        </div>
+        <div class="expgrid">
+          <div class="project">
+            <h3>Title</h3>
+            <div class="placeholderbox">
+
+            </div>
+          </div>
+          <div class="project">
+            <h3>Title</h3>
+            <div class="placeholderbox">
+
+            </div>
+          </div>
+          <div class="project">
+            <h3>Title</h3>
+            <div class="placeholderbox">
+
+            </div>
+          </div>
+          <div class="project">
+            <h3>Title</h3>
+            <div class="placeholderbox">
+
+            </div>
+          </div>
+          <div class="project">
+            <h3>Title</h3>
+            <div class="placeholderbox">
+
+            </div>
+          </div>
+          <div class="project">
+            <h3>Title</h3>
+            <div class="placeholderbox">
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <p class="lead move-up">
+              <span>Who am I:</span>
+              <br>
+              Hello, I'm Alex, a 22-year-old college student actively seeking full-time employment while pursuing
+              part-time studies. Committed to enhancing my skills,
+              I've enrolled in an online Udemy bootcamp to specialize in development. Proficient in languages like C++,
+              Python, HTML, and CSS, I'm eager to add JavaScript to my toolkit soon.
+              <br>
+              <br>
+              <span>Why You Should Consider Me:</span>
+              <br>
+              Dedication defines my work ethic. I thrive on challenges, meet deadlines unfailingly, and love to learn. I
+              actively seek ways to improve efficiency, whether
+              through side projects or refining existing processes. Having completed one year of college and 20% of my
+              bootcamp, I aim to earn my associate's degree by 2024 and complete the bootcamp
+              before spring of the same year. Despite part-time schooling, I go above and beyond, driven by my passion
+              for development.
+              <br><br>
+              <span>Final Note:</span>
+              <br>
+              With a strong dedication to my work, I am confident in being a valuable asset to any team and
+              organization. While an investment, I assure you of a substantial payoff.
+              Let's connect for an interview – a chance to meet face-to-face and explore how I can contribute to your
+              company's success.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Who am I and Why Should You Care?</h2>
+            <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700"
+              height="500" loading="lazy">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias dicta ipsa possimus natus animi obcaecati iste, sapiente fugiat ut maiores fugit voluptatum ducimus consectetur nihil quaerat provident similique odit reprehenderit.
+        Porro eaque facere culpa suscipit aliquid mollitia! Ut, dicta officiis? Corporis sint molestiae id sunt ea, facilis similique enim natus omnis consectetur. Vero, tenetur provident nesciunt fuga rem enim quibusdam.
+        Nihil veritatis ex animi ut. Nihil enim quos porro labore placeat quae quaerat recusandae iure, ratione quibusdam amet accusantium consectetur tenetur omnis harum nesciunt voluptatem eveniet, odit officiis inventore! Suscipit!
+        Repellat libero rerum beatae soluta adipisci architecto illum animi cumque a iusto voluptatem, nesciunt, saepe molestiae aspernatur, ratione porro dolor et. Fugit dicta eos sapiente, provident enim explicabo impedit dolorum?
+        Quo iste illo dolor, molestias adipisci quia repellendus tempore perferendis at dicta praesentium suscipit odit deleniti ducimus dolorum perspiciatis harum saepe veritatis distinctio labore voluptatem facere? Porro atque sapiente maiores.
+        Neque, minima odit? Unde laboriosam minus consectetur nisi voluptatum, magnam velit reiciendis. Itaque ducimus quae assumenda, eum nisi iure eveniet quis omnis deleniti, accusamus similique. Ducimus vero enim perferendis architecto!
+        Inventore, dolores. Provident repellendus praesentium eius, quidem delectus error quae tempora repellat cum ab quas laborum corporis minima amet iure aperiam nobis iusto tempore eaque, blanditiis saepe cumque mollitia! Ab!
+        Quod, ullam? Accusantium aspernatur itaque excepturi consequuntur minus quasi eveniet ab? Quo nostrum maxime excepturi eveniet at hic sed omnis ipsum, molestiae enim, incidunt praesentium impedit architecto dolore nemo! Dolor!
+        Accusamus veritatis molestiae explicabo, velit sunt quos? Nobis unde quas alias nesciunt laborum pariatur est, ab neque dolore sed ad fuga vel maxime repellat nulla quae, eius aperiam ipsam possimus.
+        Sed natus rerum fugiat sunt molestiae porro, corporis, aliquam placeat laboriosam minima totam. Cum consequuntur sequi delectus velit illum? Doloribus suscipit sequi quae est repudiandae accusamus dolorum consequuntur, labore fugit.</p>
+      </section>
     </main>
     <footer>
       <div>
-        <a href="#"><img src="./Photos/github.svg" alt="Github logo link"></a>
-        <a href="#"><img src="./Photos/linkedin.svg" alt="Linkedin logo link"></a>
+        <a href="https://github.com/AlexT-Oman"><img src="./Photos/github.svg" alt="Github logo link"></a>
+        <a href="https://www.linkedin.com/in/alex-oman-00a386299?trk=people-guest_people_search-card"><img src="./Photos/linkedin.svg" alt="Linkedin logo link"></a>
       </div>
       <div>
         <a href="mailto:blank@blank.com">Email Me</a>
