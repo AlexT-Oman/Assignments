@@ -8,7 +8,8 @@ var drums = document.querySelectorAll(".drum");
 
 for(var i = 0; i < drums.length; i++){
     drums[i].addEventListener("click", function (){
-        alert("Hello World");
+        var audio = new Audio("./sounds/crash.mp3");
+        audio.play();
     });
 }
 
